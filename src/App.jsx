@@ -10,7 +10,6 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import ProductDetailsModal from './components/ProductDetailsModal';
 import SearchModal from './components/SearchModal';
-import Toast from './components/Toast';
 
 export default function App() {
   // Search modal state
@@ -24,13 +23,6 @@ export default function App() {
 
   // Active section for nav highlighting
   const [activeSection, setActiveSection] = useState('home');
-
-  // Toast notification state
-  const [toastMessage, setToastMessage] = useState(null);
-
-  const showToast = (msg) => {
-    setToastMessage(msg);
-  };
 
   // Category card click handler
   const handleSelectCategory = (categoryName, categoryId) => {
@@ -104,7 +96,7 @@ export default function App() {
         <AboutSection />
 
         {/* Contact Us Section */}
-        <ContactSection onMessageSent={(msg) => showToast(msg)} />
+        <ContactSection />
       </main>
 
       {/* 8. Footer with Configurable Contact & Social Links */}
@@ -121,12 +113,6 @@ export default function App() {
         isOpen={searchOpen}
         onClose={() => setSearchOpen(false)}
         onSelectProduct={(product) => setSelectedProduct(product)}
-      />
-
-      {/* Feedback Toast */}
-      <Toast
-        message={toastMessage}
-        onClose={() => setToastMessage(null)}
       />
 
     </div>

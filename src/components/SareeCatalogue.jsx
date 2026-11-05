@@ -187,7 +187,7 @@ export default function SareeCatalogue({
               className="px-6 py-3 bg-maroon-800 hover:bg-maroon-900 text-white text-xs font-bold rounded-lg tracking-wider uppercase transition-colors shadow-sm whitespace-nowrap flex items-center gap-2"
             >
               <Phone className="w-3.5 h-3.5 text-gold-300" />
-              <span>Call Boutique Stylist</span>
+              <span>Call Store Owner</span>
             </a>
           )}
         </div>
